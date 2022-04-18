@@ -1,4 +1,4 @@
-#HW_1. First part. Linux terminal (GitBash)
+# HW_1. First part. Linux terminal (GitBash)
 
 **1. Посмотреть, где я**
 
@@ -108,7 +108,7 @@ q #выйти
 ``` bash
 date
 ```
-#Задания повышенной сложности
+## Задания повышенной сложности
 
 **1. Отправить http запрос на сервер http://162.55.220.72:5005/terminal-hw-request**
 
