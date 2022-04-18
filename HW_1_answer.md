@@ -28,7 +28,7 @@ cd folder3
 **6. Создать 5 файлов**
 
 ``` bash
-touch file1.txt file2.txt file3.txt file4.txt file5.txt
+touch file1.txt file2.txt file3.txt file1.json file2.json
 ```
 **7. Создать 3 папки**
 
@@ -108,7 +108,8 @@ q #выйти
 ``` bash
 date
 ```
-##Задания повышенной сложности
+#Задания повышенной сложности
+
 **1. Отправить http запрос на сервер http://162.55.220.72:5005/terminal-hw-request**
 
 ``` bash
