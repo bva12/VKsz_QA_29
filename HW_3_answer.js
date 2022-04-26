@@ -55,3 +55,40 @@ printSmile('*/', 3)
 // Слово (word) состоит из  (число) гласных и (число) согласных букв
 
 // Проверки: 'case', 'Case', 'Check-list'
+const getWordStructure = function(word) {
+    word = word.toLowerCase();
+    word_replace = word.replace(/[^a-z]/g, "");
+    let count_glasnye = 0;
+    let count_soglasnye = 0;
+    let glasnye = ['e', 'y', 'u', 'i', 'o', 'a'];
+    for (var i = 0; i < word_replace.length; i++) {
+        for (var j = 0; j < glasnye.length; j++) {
+            if (word[i] === glasnye[j]) {
+                count_glasnye += 1;
+            }
+        }
+    }
+    count_soglasnye = word_replace.length - count_glasnye;
+    console.log("Слово " + word + " состоит из " + count_glasnye + " гласных и " + count_soglasnye + " согласных букв.");
+}
+
+getWordStructure("case");
+getWordStructure("Case");
+getWordStructure("Check-list");
+
+// 4** Написать функцию, которая проверяет, является ли слово палиндромом
+
+const isPalindrom = function(word) {
+    word_lower = word.toLowerCase();
+    let opposite_word = "";
+    for (i = word_lower.length -1 ; i >= 0; --i) {
+        opposite_word += word_lower[i];
+    }
+    if (word_lower == opposite_word) {
+        console.log("Слово " + word + " является палиндромом")
+    } else {
+        console.log("Слово " + word + " не является палиндромом")
+    }
+}
+
+isPalindrom("aBba")
