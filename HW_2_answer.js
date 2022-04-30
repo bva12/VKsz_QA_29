@@ -104,11 +104,11 @@ if (age_1 < age_2) {
 // }
 // Вывести в консоль результат работы функции с возрастами 17, 18, 61
 const checkAge = function(age) {
-    if (age < 18) {
-        console.log("You don’t have access cause your age is " + age + ". It's less then " + 18)
-    } else if (age >= 18 && age < 60) {
+    if (age < age_2) {
+        console.log("You don’t have access cause your age is " + age + ". It's less then " + age_2)
+    } else if (age >= age_2 && age < age_3) {
         console.log("Welcome !")
-    } else if (age > 60) {
+    } else if (age > age_3) {
         console.log("Keep calm and look Culture channel")
     } else {
         console.log("Technical work")
@@ -123,11 +123,11 @@ const checkAge2 = function(age) {
     if (typeof age != "number") {
         throw new Error("Not a number")
     } else {
-        if (age < 18) {
-            console.log("You don’t have access cause your age is " + age + ". It's less then " + 18)
-        } else if (age >= 18 && age < 60) {
+        if (age < age_2) {
+            console.log("You don’t have access cause your age is " + age + ". It's less then " + age_2)
+        } else if (age >= age_2 && age < age_3) {
             console.log("Welcome !")
-        } else if (age > 60) {
+        } else if (age > age_3) {
             console.log("Keep calm and look Culture channel")
         }
     }
@@ -139,12 +139,13 @@ checkAge2(61)
 
 // 3 **: Преобразовать 2* таким образом, чтобы значение '2' (строка в которой лежит ТОЛЬКО ЦИФРА) пропускалось, преобразовываясь в number
 const checkAge3 = function(age) {
+    age = Number(age)
     if (!isNaN(age)) {
-        if (Number(age) < 18) {
-            console.log("You don’t have access cause your age is " + Number(age) + ". It's less then " + 18)
-        } else if (Number(age) >= 18 && Number(age) < 60) {
+        if (age < age_2) {
+            console.log("You don’t have access cause your age is " + age + ". It's less then " + age_2)
+        } else if (age >= age_2 && age < age_3) {
             console.log("Welcome !")
-        } else if (Number(age) > 60) {
+        } else if (age > age_3) {
             console.log("Keep calm and look Culture channel")
         }
     } else { console.log('Not integer value') }
@@ -152,14 +153,7 @@ const checkAge3 = function(age) {
 checkAge3("-23d")
 
 // 4***: Преобразовать задание 3* таким образом, чтобы возраст вводится используя функцию prompt в привязанной верстке
-const checkAge4 = function(age) {
-        if (Number(age)) {
-            if (Number(age) < 18) {
-                console.log("You don’t have access cause your age is " + Number(age) + ". It's less then " + 18)
-            } else if (Number(age) >= 18 && Number(age) < 60) {
-                console.log("Welcome !")
-            } else if (Number(age) > 60) {
-                console.log("Keep calm and look Culture channel")
-            }
-        } else { console.log('Not integer value') }
-        checkAge4(prompt("Сколько Вам лет?", 0))
+
+// Для просмотра решения необходимо запустить файл HW_2 - 4 answer.html
+let agePrompt = prompt('How old are you?');
+checkAge3(agePrompt)
